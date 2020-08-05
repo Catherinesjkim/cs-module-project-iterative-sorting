@@ -15,12 +15,31 @@ def selection_sort(arr):
     return arr
 
 
-# TO-DO:  implement the Bubble Sort function below
+# TO-DO: implement the Bubble Sort function below
+# It's the simplest sorting algo that works by repeatedly swapping the adjacent elements if they are in wrong order
 def bubble_sort(arr):
-    # Your code here
-
-
+    # loop through your array - traverse through all array elements 
+    for i in range(1, len(arr)): 
+        
+        # Last i elements are already in place
+        for j in range(len(arr) - 1):
+            
+            # compare each element to its neighbor
+            # traverse the array from 0 to n-i-1
+            # swap if the element found is greater than the next element
+            # if element in wrong position (relative to each other, swap them)
+            if arr[j] > arr[j+1]:
+                # Swap 
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                
+        # if no swaps performed, stop. Else, go back to the element at index 0 and repeat step 1
     return arr
+
+# Driver code to test above 
+arr = [19, 13, 6, 2, 18, 8]
+bubble_sort(arr)
+print(arr)
+
 
 '''
 STRETCH: implement the Counting Sort function below
