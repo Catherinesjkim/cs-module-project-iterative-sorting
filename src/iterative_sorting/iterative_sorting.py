@@ -29,12 +29,6 @@ selection_sort(arr)
 print(arr)
 
 
-
-
-
-
-
-
 # TO-DO: implement the Bubble Sort function below
 # It's the simplest sorting algo that works by repeatedly swapping the adjacent elements if they are in wrong order
 def bubble_sort(arr):
