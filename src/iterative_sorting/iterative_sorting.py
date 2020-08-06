@@ -1,18 +1,38 @@
-# TO-DO: Complete the selection_sort() function below
+import sys
+
+# TO-DO: Complete the selection_sort() function below - O(N^2)
 def selection_sort(arr):
-    # loop through n-1 elements
+    # loop through n - 1 elements
+    # start with current index = 0
     for i in range(0, len(arr) - 1):
         cur_index = i
+        # loop through elements on right-hand-side of current index and find the smallest element
         smallest_index = cur_index
+        
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
-        # Your code here
+        for j in range(i + 1, len(arr)): 
+            if arr[smallest_index] > arr[j]:
+                smallest_index = j
 
-
-        # TO-DO: swap
-        # Your code here
-
+        # TO-DO: swap the element at current index with the smallest element found in above loop
+        arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
     return arr
+
+
+# Driver code to test above
+arr = [3, 1, 41, 59, 26, 53, 60, 62, 65, 34, 77, 98, 11]
+print(arr)
+selection_sort(arr)
+
+# Let's see the list after we run the Selection Sort
+print(arr)
+
+
+
+
+
+
 
 
 # TO-DO: implement the Bubble Sort function below
@@ -38,7 +58,7 @@ def bubble_sort(arr):
 # Driver code to test above 
 arr = [19, 13, 6, 2, 18, 8]
 bubble_sort(arr)
-print(arr)
+# print(arr)
 
 
 '''
